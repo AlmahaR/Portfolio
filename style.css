@@ -1,0 +1,392 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Cormorant Garamond', serif;
+
+    color: white;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.65),
+    rgba(0,0,0,0.65)),
+
+    url("images/almahabackground.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+}
+
+header{
+
+    width: 100%;
+
+    padding: 25px 60px;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+}
+
+nav ul{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 45px;
+
+    list-style: none;
+
+}
+
+nav a{
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+
+}
+
+nav a:hover{
+
+    color: #d6d6d6;
+
+    border-bottom: 1px solid white;
+
+}
+
+.hero{
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px 40px;
+
+}
+
+.hero-content{
+
+    max-width: 850px;
+
+    animation: fadeUp 1.5s ease;
+
+}
+
+.hero-content h1{
+
+    font-size: 65px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+}
+
+.profile-img{
+
+    width: 200px;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid rgba(255,255,255,0.8);
+
+    padding: 6px;
+
+    background-color: rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(5px);
+
+    margin-bottom: 25px;
+
+    transition: all 0.4s ease;
+
+}
+
+.profile-img:hover{
+
+    transform: scale(1.05);
+
+    filter: brightness(110%);
+
+}
+
+.hero-content h2{
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+
+}
+
+.hero-content p{
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    max-width: 720px;
+
+    margin: 0 auto 35px;
+
+}
+
+.btn{
+
+    display: inline-block;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid white;
+
+    padding: 14px 40px;
+
+    letter-spacing: 3px;
+
+    transition: all 0.3s ease;
+
+}
+
+.btn:hover{
+
+    background-color: white;
+
+    color: black;
+
+    transform: translateY(-4px);
+
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.projects-section{
+
+    min-height: 100vh;
+
+    padding: 140px 60px 80px;
+
+    text-align: center;
+
+    animation: fadeUp 1.5s ease;
+
+}
+
+.projects-section h1{
+
+    font-size: 60px;
+
+    font-weight: 500;
+
+    margin-bottom: 50px;
+
+}
+
+.projects-grid{
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+}
+
+.project-card{
+
+    border: 1px solid rgba(255,255,255,0.6);
+
+    padding: 35px;
+
+    background-color: rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(6px);
+
+    transition: all 0.4s ease;
+
+}
+
+.project-card:hover{
+
+    transform: translateY(-10px);
+
+    background-color: rgba(255,255,255,0.12);
+
+}
+
+.project-card h2{
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    margin-bottom: 18px;
+
+}
+
+.project-card p{
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    header{
+
+        padding: 20px;
+
+    }
+
+    nav ul{
+
+        gap: 20px;
+
+    }
+
+    .hero-content h1{
+
+        font-size: 42px;
+
+    }
+
+    .hero-content h2{
+
+        font-size: 30px;
+
+    }
+
+    .hero-content p{
+
+        font-size: 18px;
+
+    }
+
+    .profile-img{
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+    .projects-grid{
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .projects-section{
+
+        padding: 110px 25px 80px;
+
+    }
+
+    .projects-section h1{
+
+        font-size: 42px;
+
+    }
+
+}
+.social-links{
+
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+}
+
+.social-links a{
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    transition: all 0.3s ease;
+
+}
+
+.social-links a:hover{
+
+    color: #d6d6d6;
+
+    transform: translateY(-3px);
+
+    border-bottom: 1px solid white;
+
+}
